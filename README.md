@@ -33,3 +33,6 @@
 ## 備註 ##
 
 ### 2.0以及2.1下認證框架(authentication framework)的import ###
+Django 2.0以前:
+Django 2.1:
+![image](https://raw.githubusercontent.com/hohh0115/Django-By-Example-of-2.x/master/media/Image.png)
