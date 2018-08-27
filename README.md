@@ -37,3 +37,9 @@ Django 2.0以前:
 ![image](https://raw.githubusercontent.com/hohh0115/Django-By-Example-of-2.x/master/media/before.png)
 Django 2.1:
 ![image](https://raw.githubusercontent.com/hohh0115/Django-By-Example-of-2.x/master/media/Image.png)
+
+說明：
+
+1. [https://docs.djangoproject.com/en/2.1/releases/2.1/#features-removed-in-2-1](https://docs.djangoproject.com/en/2.1/releases/2.1/#features-removed-in-2-1)
+2. 在2.1版本之中，contrib.auth.views.login(), logout(), password_change(), password_change_done(), password_reset(), password_reset_done(), password_reset_confirm(), and password_reset_complete() are removed.
+3. 在2.0之前的寫法是使用的login()去調用LoginView class的as_view()，在2.1之後是直接調用LoginView class的as_view()，login()就被移除了
