@@ -54,7 +54,6 @@ def register(request):
 			# Set the chosen password
 			new_user.set_password(user_form.cleaned_data['password'])
 			# Save the User object
-			print(new_user.password)
 			new_user.save()
 			# Create the user profile
 			profile = Profile.objects.create(user=new_user)
