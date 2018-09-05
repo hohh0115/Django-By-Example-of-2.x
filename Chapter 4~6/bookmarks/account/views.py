@@ -39,7 +39,6 @@ def dashboard(request):
 	following_ids = request.user.following.values_list('id', flat=True)
 	if following_ids: # If user is following others, retrieve only their actions
 		actions = actions.filter(user_id__in=following_ids).select_related('user', 'user__profile').prefetch_related('target')
-		print(actions.query)
 	actions = actions[:10]
 
 	return render(request, 'account/dashboard.html', {'section': 'dashboard', 'actions': actions})
@@ -50,7 +49,6 @@ def register(request):
 		if user_form.is_valid():
 			# Create a new user object but avoid saving it yet
 			new_user = user_form.save(commit=False)
-			print(user_form.cleaned_data['password'])
 			# Set the chosen password
 			new_user.set_password(user_form.cleaned_data['password'])
 			# Save the User object
